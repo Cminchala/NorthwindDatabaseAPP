@@ -20,13 +20,13 @@ public class supplierResults extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_products_result);
+        setContentView(R.layout.activity_supplier_results);
         Intent i = getIntent();
         String q = i.getStringExtra("query");
 
 
         ArrayList<Row> rows = queryDatabase(q);
-        RecyclerView rv = (RecyclerView) findViewById(R.id.queryresults);
+        RecyclerView rv = (RecyclerView) findViewById(R.id.supplierqueryresults);
 
         DividerItemDecoration decoration = new DividerItemDecoration(getApplicationContext(),DividerItemDecoration.VERTICAL);
         rv.addItemDecoration(decoration);
@@ -40,7 +40,7 @@ public class supplierResults extends AppCompatActivity {
     }
     ArrayList<Row> queryDatabase (String query)
     {
-        ArrayList<Row> queryResult = new ArrayList<Row>();
+        ArrayList<Row> queryResult = new ArrayList<>();
         try{
             SQLiteDatabase db = openOrCreateDatabase("northwind.db", Context.MODE_PRIVATE,null);
             Cursor cursor = db.rawQuery(query,null);

@@ -19,6 +19,7 @@ public class supplier extends AppCompatActivity {
         Intent i = new Intent(this,productsResult.class);
         EditText a = (EditText) findViewById(R.id.supplierCountry);
         EditText b = (EditText) findViewById(R.id.City);
+
         if(a.getText().toString().matches("")) {
             i.putExtra("query", "SELECT country From Suppliers");
             startActivity(i);
@@ -29,7 +30,7 @@ public class supplier extends AppCompatActivity {
             startActivity(i);
         }
         else {
-            i.putExtra("query", "SELECT companyname,country,city From Suppliers WHERE country == " + "'" + a.getText().toString() + "'" + " AND city  == " + "'" + b.getText().toString() + "'");
+            i.putExtra("query", "SELECT CompanyName, country, city FROM Suppliers WHERE country = '" + a.getText().toString() + "' AND city = '" + b.getText().toString() + "'");
 
             startActivity(i);
         }

@@ -50,7 +50,6 @@ public class productsResult extends AppCompatActivity {
         Cursor cursor = null;
         try{
             db = openOrCreateDatabase("northwind.db", Context.MODE_PRIVATE,null);
-            Toast.makeText(getApplicationContext(), "Database opened successfully", Toast.LENGTH_SHORT).show();
 
             cursor = db.rawQuery(query, selectionArgs);
             while(cursor.moveToNext())
