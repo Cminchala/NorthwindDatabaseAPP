@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">NorthWind Food Products</string>
+    <string name="products">products</string>
+    <string name="categories">Categories</string>
+    <string name="product_under_amount">product under Amount</string>
+    <string name="suppliers">suppliers</string>
+    <string name="go">GO!</string>
+    <string name="sortby_category">SortBy Category</string>
+    <string name="supplier_country">supplier country</string>
+    <string name="suppliercity">supplierCity</string>
+    <string name="show_results">Show Results</string>
+    <string name="city">city</string>
+    <string name="productcountry">productCountry</string>
+    <string name="unitinstock">unitInStock</string>
+    <string name="productsandsuppliers">ProductsAndSuppliers</string>
+</resources>
