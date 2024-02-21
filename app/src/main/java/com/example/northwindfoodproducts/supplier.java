@@ -20,12 +20,12 @@ public class supplier extends AppCompatActivity {
         EditText a = (EditText) findViewById(R.id.supplierCountry);
         EditText b = (EditText) findViewById(R.id.City);
         if(a.getText().toString().matches("")) {
-            i.putExtra("query", "SELECT companyname,country,city From Suppliers");
+            i.putExtra("query", "SELECT country From Suppliers");
             startActivity(i);
         }
         else if(b.getText().toString().matches(""))
         {
-            i.putExtra("query", "SELECT companyname,country,city From Suppliers");
+            i.putExtra("query", "SELECT city From Suppliers");
             startActivity(i);
         }
         else {
